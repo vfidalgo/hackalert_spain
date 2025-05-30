@@ -24,5 +24,14 @@ export default defineConfig({
   },
   server: {
     port: 5173
-  }
+  },
+  optimizeDeps: {
+  include: [
+    'react',
+    'react-dom',
+    'react-leaflet',
+    'leaflet'
+  ],
+  exclude: ['js-big-decimal']
+}
 })
