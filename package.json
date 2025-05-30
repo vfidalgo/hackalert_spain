@@ -9,20 +9,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-leaflet": "^4.12.0",  // Versión actualizada
-    "leaflet": "^1.9.4",
-    "@supabase/supabase-js": "^2.39.0"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.0.3",
-    "vite": "^4.4.5"
-  }
-}
-  "dependencies": {
-    -  "react-leaflet": "^4.10.2",
-    +  "react-leaflet": "^4.12.0",
-    "react-dom": "^18.2.0",
-    "react-leaflet": "^4.10.2",
+    "react-leaflet": "^4.12.0",
     "leaflet": "^1.9.4",
     "@supabase/supabase-js": "^2.39.0"
   },
