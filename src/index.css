@@ -1,0 +1,11 @@
+@import 'leaflet/dist/leaflet.css';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
