@@ -1,0 +1,25 @@
+name: Daily Scraping
+on:
+  schedule:
+    - cron: "0 8 * * *"  # 8 AM UTC daily
+  workflow_dispatch:     # Permite ejecución manual
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 supabase
+      
+      - name: Run INCIBE Scraper
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python scrapers/incibe_scraper.py
